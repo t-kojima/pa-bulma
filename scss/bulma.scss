@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$kintone-primary: #3498DB;
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+// $family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $kintone-primary;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+
+/*** https://bulma.io/documentation/customize/with-node-sass/ をコピーして作成 ***/
+
+// .bulma 以下に適用を限定 https://github.com/jgthms/bulma/issues/302#issuecomment-426051255
+.bulma {
+  // Import only what you need from Bulma
+  @import "../node_modules/bulma/sass/utilities/_all.sass";
+
+  // base/_all.sass を適用すると minireset が適用されて kintone のスタイルも崩れてしまうので、
+  // generic.sass は個別に適用、
+  // minireset.sass は .bulma 以下の要素に適用するように改変したものに入れ替え
+  // @import "../node_modules/bulma/sass/base/_all.sass";
+  @import "../node_modules/bulma/sass/base/generic.sass";
+
+  @import "../node_modules/bulma/sass/form/_all.sass";
+  @import "../node_modules/bulma/sass/components/card.sass";
+  @import "../node_modules/bulma/sass/components/modal.sass";
+
+  @import "../node_modules/bulma/sass/elements/button.sass";
+  @import "../node_modules/bulma/sass/elements/content.sass";
+  @import "../node_modules/bulma/sass/elements/icon.sass";
+  @import "../node_modules/bulma/sass/elements/other.sass";
+  @import "../node_modules/bulma/sass/elements/tag.sass";
+  @import "../node_modules/bulma/sass/grid/columns.sass";
+  @import "../node_modules/bulma/sass/helpers/_all.sass";
+}
+
+// スコープは .bulma から外す
+@import "bulma-minireset.sass";

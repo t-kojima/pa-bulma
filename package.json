@@ -1,0 +1,17 @@
+{
+  "name": "pa-bulma",
+  "version": "1.0.0",
+  "description": "partial application of bulma",
+  "repository": "ssh://git@github.com/t-kojima/pa-bulma.git",
+  "author": "t-kojima <t-kojima@sonicgarden.jp>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "node-sass scss/bulma.scss css/bulma.css",
+    "minify": "cleancss css/bulma.css > css/bulma.min.css"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.1",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^5.0.0"
+  }
+}
