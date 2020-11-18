@@ -34,4 +34,4 @@ pa-bulmaでは`.bulma`クラスを付加したエレメント配下にのみbulm
 
 ## Acknowledgments
 
-本パッケージの仕組みは @latica-jp によって作成されています。心より感謝申し上げます。
+本パッケージの仕組みは [@latica-jp](https://github.com/latica-jp) によって作成されています。心より感謝申し上げます。
