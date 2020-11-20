@@ -18,7 +18,7 @@ yarn add pa-bulma
 import 'pa-bulma/css/bulma.min.css'
 ```
 
-3. bulmaを適用したい要素に`.bluma`クラスを付加する
+3. bulmaを適用したい要素に`.bulma`クラスを付加する
 
 ```html
 <div class="bulma">
